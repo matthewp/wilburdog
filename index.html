@@ -1,0 +1,34 @@
+<!doctype html>
+<html>
+<head>
+  <title>Wilbur Phillips</title>
+  <link href="css/styles.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.typekit.net/c/56209a/1w;proxima-nova,2,gbh:W:i1,gbk:W:i3,gbm:W:i4,gbp:W:i5,gbr:W:i6,gbt:W:i7,gbw:W:i8,gby:W:i9,gbg:W:n1,gbj:W:n3,gbl:W:n4,gbn:W:n5,gbq:W:n6,gbs:W:n7,gbv:W:n8,gbx:W:n9;source-code-pro,2,glx:W:n3,glz:W:n4,gm5:W:n7/l" media="all">
+</head>
+<body>
+  <div class="profile"></div>
+  <article>
+    <h2 class="greeting">Hi!</h2>
+    <h1 class="name">I'm Wilbur</h1>
+    <h3 class="message">I'm a good boy.</h3>
+    <div id="instagram"></div>
+  </article>
+  <script src="js/instafeed.min.js"></script>
+  <script>
+    (function(){
+      var feed = new Instafeed({
+        get: 'user',
+        userId: '25077498',
+        accessToken: '3424673635.980b7d9.1aef7f771589401eb8eda3bfc90fa249',
+        target: 'instagram',
+        resolution: 'standard_resolution',
+        after: function() {
+			    var el = document.getElementById('instagram');
+				  el.classList.add('show');
+        }
+      });
+      feed.run();
+    })();
+  </script>
+</body>
+</html>

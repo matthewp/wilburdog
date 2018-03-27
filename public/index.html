@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+
+<title>Wilbur Phillips</title>
+<link href="css/styles.css" rel="stylesheet">
+
+
+<div class="profile"></div>
+<article>
+  <h2 class="greeting">Hi!</h2>
+  <h1 class="name">I'm Wilbur</h1>
+  <h3 class="message">I'm a good boy.</h3>
+  <div id="instagram"></div>
+</article>
+<script src="js/instafeed.min.js"></script>
+<script>
+  (function(){
+    var feed = new Instafeed({
+      get: 'user',
+      userId: '25077498',
+      accessToken: '3424673635.980b7d9.1aef7f771589401eb8eda3bfc90fa249',
+      target: 'instagram',
+      resolution: 'standard_resolution',
+      after: function() {
+		    var el = document.getElementById('instagram');
+			  el.classList.add('show');
+      }
+    });
+    feed.run();
+  })();
+</script>

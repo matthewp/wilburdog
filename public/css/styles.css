@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'proxima-nova';
+    src: url('../fonts/proxima-nova.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 img,legend {
     border: 0
@@ -400,4 +407,3 @@ article {
 #instagram img {
     width: 100%
 }
-

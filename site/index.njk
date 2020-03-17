@@ -1,0 +1,23 @@
+---
+permalink: index.html
+---
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wilbur Phillips</title>
+<link rel="stylesheet" href="css/styles.css">
+
+<div class="profile"></div>
+<article>
+  <h2 class="greeting">Hi!</h2>
+  <h1 class="name">I'm Wilbur</h1>
+  <h3 class="message">I'm a good boy.</h3>
+  <div id="instagram">
+  {% for photo in collections.recentPhotos %}
+    <a href="{{ photo.url }}">
+      <img alt="{{ photo.caption }}" src="{{ photo.url }}" />
+    </a>
+  {% endfor %}
+  </div>
+</article>

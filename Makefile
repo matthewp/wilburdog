@@ -1,7 +1,9 @@
+ELEVENTY=node_modules/.bin/eleventy
+
 deploy:
-	aws s3 sync public s3://wilbur.dog
+	aws s3 sync _site s3://wilbur.dog
 .PHONY: deploy
 
-serve:
-	http-server -p 1888
-.PHONY: serve
+generate:
+	node $(ELEVENTY) --input=site --config=site/.eleventy.js
+.PHONY: generate

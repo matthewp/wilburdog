@@ -29,6 +29,12 @@ const getAllPhotos = memoize(async function() {
   }));
   let items = await p;
 
+  items.sort((a, b) => {
+    let ad = new Date(a.head.Metadata.created);
+    let bd = new Date(b.head.Metadata.created);
+    return ad > bd ? -1 : 1;
+  });
+
   return items;
 });
 
@@ -55,10 +61,6 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addCollection('recentPhotos', async function() {
     let all = await getAllPhotos();
     let recent = all.slice(0, 20);
-
-    console.log('got', recent.length, 'photos');
-
-    debugger;
 
     return recent;
   });

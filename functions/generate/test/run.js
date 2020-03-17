@@ -4,4 +4,6 @@ async function run() {
   await handle();
 }
 
-run();
+run().catch(err => {
+  console.error(err);
+});

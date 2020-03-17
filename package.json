@@ -28,6 +28,6 @@
     "@matthewp/compile": "^2.4.3",
     "@matthewp/lon": "^1.3.1",
     "dynamodb-data-types": "^3.0.1",
-    "express": "^4.17.1"
+    "tap": "^14.10.6"
   }
 }

@@ -7,3 +7,7 @@ deploy:
 generate:
 	node $(ELEVENTY) --input=site --config=site/.eleventy.js
 .PHONY: generate
+
+test:
+	node functions/save-images/test/basics-test.js
+.PHONY: test

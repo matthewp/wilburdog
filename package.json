@@ -1,0 +1,33 @@
+{
+  "name": "wilburdog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "test.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/matthewp/wilburdog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "PROPRIETARY",
+  "private": true,
+  "bugs": {
+    "url": "https://github.com/matthewp/wilburdog/issues"
+  },
+  "homepage": "https://github.com/matthewp/wilburdog#readme",
+  "dependencies": {
+    "@11ty/eleventy": "^0.10.0",
+    "aws-sdk": "^2.639.0",
+    "fast-memoize": "^2.5.2",
+    "s3-redeploy": "^1.1.1"
+  },
+  "devDependencies": {
+    "@matthewp/compile": "^2.4.3",
+    "@matthewp/lon": "^1.3.1",
+    "dynamodb-data-types": "^3.0.1",
+    "tap": "^14.10.6"
+  }
+}

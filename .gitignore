@@ -1,0 +1,6 @@
+node_modules/
+.vscode/
+functions/generate/_site
+_site
+main.zip
+main.js

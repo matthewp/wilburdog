@@ -6,7 +6,7 @@ exports.handle = async function(e) {
   
   await redeploy({
     bucket: 'wilbur.dog',
-    cwd: __dirname + '/../_site',
+    cwd: '/tmp/_site',
     noRm: true
   })
 };
